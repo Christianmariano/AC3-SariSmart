@@ -1,0 +1,524 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Burger menu styles */
+.burger {
+  display: none; /* Hidden by default */
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  color: #0f2027;
+  user-select: none;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background-color: #0f2027;
+  color: white;
+  padding-top: 20px;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-name {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-name h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.side-menu ul {
+  list-style: none;
+  width: 100%;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.side-menu ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.side-menu ul li:hover {
+  background-color: #1b2a38;
+}
+
+/* Container */
+.container {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Header/Nav */
+.header {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Search Styles */
+.search {
+  display: flex;
+  align-items: center;
+  flex: 1 1 300px;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.search input {
+  border: none;
+  padding: 8px 15px;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+}
+
+.search button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* User section */
+.user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.user .btn {
+  background-color: #0f2027;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.user .btn:hover {
+  background-color: #1b2a38;
+}
+
+.img-case {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #0f2027;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-case img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50px; /* Adjust as necessary */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 200px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Arrow Styles */
+.arrow {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.arrow-up {
+  transform: rotate(180deg); /* Rotate arrow to point up */
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: white;
+  flex: 1 1 250px;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  align-items: center;
+}
+
+.card .box h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.card .box h3 {
+  font-weight: 400;
+  color: #666;
+}
+
+.icon-case img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Content 2 Section */
+.content-2 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Tables */
+.recent-payment, .new-student {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 500px;
+  min-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.title h2 {
+  font-size: 1.4rem;
+}
+
+.title .btn {
+  background-color: #0f2027;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.title .btn:hover {
+  background-color: #1b2a38;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  min-width: 70px;
+}
+
+.status.paid {
+  background-color: #4CAF50; /* green */
+}
+
+.status.pending {
+  background-color: #FF9800; /* orange */
+}
+
+.status.failed {
+  background-color: #f44336; /* red */
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .side-menu {
+    transform: translateX(-100%);
+  }
+
+  .side-menu.active {
+    transform: translateX(0);
+  }
+
+  .container {
+    margin-left: 0 !important;
+    padding: 20px 10px;
+  }
+
+  .brand-name h1 {
+    font-size: 1.2rem;
+  }
+
+  .brand-name img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .side-menu ul li {
+    padding: 15px 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+
+  .content-2 {
+    flex-direction: column;
+  }
+
+  .recent-payment, .new-student {
+    min-width: 100%;
+  }
+}
+
+.dropdown-menu {
+  display: none;
+  /* your styles */
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/*Profile*/
+/* Profile Update Form Styles */
+.profile-form-container {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-form h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #0f2027;
+  margin-bottom: 10px;
+}
+
+.profile-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0f2027;
+}
+
+.profile-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-form .form-group input[type="text"],
+.profile-form .form-group input[type="password"],
+.profile-form .form-group input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.profile-form .btn-submit {
+  background-color: #0f2027;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-form .btn-submit:hover {
+  background-color: #1b2a38;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2001;
+}
